@@ -1,0 +1,37 @@
+.badge {
+	min-width: 30px;
+	padding: 0 5px;
+	height: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 99999px;
+	font-size: .7rem;
+	cursor: default;
+	user-select: none;
+
+	&.primary {
+		background-color: rgba(51,94,234,.1);
+		color: #335eea;
+
+		svg {
+			fill: #335eea;
+		}
+	}
+	&.danger {
+		background-color: lighten(@danger, 36.5%);
+		color: @danger;
+
+		svg {
+			fill: @danger;
+		}
+	}
+	&.success {
+		background-color: fade(@success, 15%);
+		color: @success;
+
+		svg {
+			fill: @success;
+		}
+	}
+}

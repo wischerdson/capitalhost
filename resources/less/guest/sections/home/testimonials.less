@@ -1,0 +1,29 @@
+#section_home_testimonials {
+	padding-top: 8rem;
+	position: relative;
+	z-index: 2;
+
+	@media (max-width: 1180px) {
+		padding-top: 3rem;
+	}
+	@media (max-width: 560px) {
+		padding-top: 1.5rem;
+	}
+	@media (max-width: 460px) {
+		& > * {
+			display: none;
+		}
+	}
+
+	.text-center {
+		max-width: 655px;
+		text-align: center;
+		margin: 0 auto;
+		opacity: 0;
+		pointer-events: none;
+
+		.text-muted {
+			font-size: 1.1875rem;
+		}
+	}
+}

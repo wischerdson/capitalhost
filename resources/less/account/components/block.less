@@ -1,0 +1,51 @@
+.block {
+	.block-title {
+		margin-bottom: 10px;
+		font-weight: 500;
+		color: fade(black, 60%);
+	}
+}
+
+.white-block {
+	background-color: white;
+	padding: 30px 20px;
+	border-radius: 7px;
+	box-shadow: 0 .75rem 1.5rem rgba(18,38,63,.03);
+
+	&.link {
+		padding: 15px 15px;
+		cursor: pointer;
+		transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+
+		img, svg {
+			width: 100%;
+		}
+		&:hover {
+			box-shadow: 0 10px 30px rgba(0,0,0,.1);
+			transform: translateY(-10px);
+			// transform: scale(1.06);
+		}
+		&:active {
+			background: fade(black, .01);
+		}
+	}
+	&.form-group, &.input-group {
+		padding: 0;
+		display: flex;
+		align-items: center;
+
+		.form-control {
+			border: none;
+			margin: 0;
+
+			&:focus {
+				border: none;
+				box-shadow: 0 10px 30px rgba(0,0,0,.1);
+			}
+		}
+	}
+}

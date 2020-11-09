@@ -1,0 +1,145 @@
+/* #template_sign_in {
+	padding-top: 3rem;
+	margin-bottom: 100px;
+	min-height: 80vh;
+
+	h1 {
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+	form {
+		max-width: 320px;
+		margin: 0 auto;
+
+		.remember-forgot {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: 1rem 0;
+
+			.form-group {
+				margin: 0;
+			}
+			.forgot {
+				font-size: .9rem;
+				text-decoration: underline;
+
+				&:hover {
+					opacity: .8;
+				}
+			}
+		}
+	}
+}
+
+*/
+
+
+#template_sign_in {
+	.container {
+		margin-bottom: 100px;
+		margin-top: 50px;
+
+		@media (max-width: 750px) {
+			margin-top: 20px;
+		}
+
+		& > .grid {
+			display: grid;
+			grid-template-columns: .75fr 1fr;
+			grid-gap: 40px;
+
+			@media (max-width: 750px) {
+				display: flex;
+				flex-direction: column;
+
+			}
+			.left, .right {
+				width: 100%;
+
+				@media (max-width: 750px) {
+					margin: 0 auto;
+					max-width: 400px;
+				}
+			}
+
+			.left {
+				.title, form {
+					max-width: 700px;
+				}
+				.title {
+					padding-top: 20px;
+					padding-bottom: 28px;
+
+					h1 {
+						font-weight: 500;
+						line-height: 1.25;
+						margin-bottom: 0;
+						margin-left: -3px;
+					}
+					.text-muted {
+						font-size: 1.0625rem;
+					}
+				}
+
+				form {
+					.btn {
+						width: 40%;
+						padding: 13px 30px;
+
+						@media (max-width: 750px) {
+							width: 100%;
+						}
+					}
+					.bottom {
+						display: flex;
+						align-items: center;
+						
+						.sign-up {
+							margin-left: 20px;
+							line-height: 1.2;
+							font-size: .9rem;
+
+							@media (max-width: 750px) {
+								margin-left: 0;
+								margin-top: 12px;
+							}
+						}
+						@media (max-width: 750px) {
+							flex-direction: column;
+						}
+					}
+				}
+			}
+			.right {
+				.skewed-image {
+					perspective-origin: left center;
+					perspective: 1500px;
+					transform-style: preserve-3d;
+					width: 115%;
+					pointer-events: none;
+
+					img {
+						transform: rotateY(-35deg) rotateX(15deg);
+						backface-visibility: hidden;
+						border-radius: 0.625rem;
+						box-shadow: 25px 60px 125px -25px rgba(80, 102, 144, 0.1), 16px 40px 75px -40px rgba(0, 0, 0, 0.2);
+						max-width: 100%;
+						height: auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+.unacceptable {
+	color: @danger;
+	text-align: center;
+	padding-bottom: 20px;
+	padding-top: calc(20px - 1rem);
+}

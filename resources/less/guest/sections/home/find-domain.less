@@ -1,0 +1,89 @@
+#section_findDomain {
+	padding: 30px 0;
+	padding-bottom: 130px;
+	background-color: #f9fbfd;
+
+	@media (max-width: 750px) {
+		display: none;
+	}
+
+	.form-group, .form-control {
+		margin: 0;
+	}
+
+	h2 {
+		color: #142142;
+		font-size: 1.9rem;
+		font-weight: 400;
+		margin-bottom: 0;
+	}
+	.section-desc {
+		display: flex;
+
+		p {
+			font-size: 1.1rem;
+			color: #869ab8;
+			margin-bottom: 0;
+		}
+		.link-list {
+			display: flex;
+			margin-left: auto;
+
+			&__item {
+				&:not(:last-child) {
+					margin-right: 42px;
+				}
+			}
+			&__link {
+				text-decoration: underline;
+			}
+		}
+	}
+	form {
+		.row {
+			margin: 0;
+			margin-top: 20px;
+			display: grid;
+			align-items: center;
+			grid-template-columns: 1fr auto;
+			grid-gap: 10px;
+		}
+		.form-control {
+			display: block;
+			height: 55px;
+			font-size: 1.25rem;
+			padding: 0 30px;
+			background-color: @white;
+			border-radius: 7px;
+		}
+		.btn {
+			margin: 0;
+			height: 100%;
+			font-size: 1rem;
+		}
+	}
+	.price-list {
+		margin-top: 30px;
+		display: flex;
+		justify-content: center;
+
+		&__item {
+			font-size: 28px;
+
+			&:not(:last-child) {
+				margin-right: 40px;
+			}
+
+			.tld {
+				font-weight: 600;
+			}
+			.price {
+				font-weight: 300;
+
+				&:after {
+					content: '₽';
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,230 @@
+#section_sidebar {
+	position: fixed;
+	overflow-y: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	max-width: 250px;
+	background: white;
+	border-right: 1px solid #e3ebf6;
+	padding: 12px 24px;
+	z-index: 98;
+
+	@media (max-width: 1000px) {
+		position: relative;
+		overflow-y: initial;
+		top: initial;
+		left: initial;
+		bottom: initial;
+		width: initial;
+		max-width: initial;
+		background: initial;
+		border-right: initial;
+		padding: initial;
+		z-index: 98;
+		
+		&[data-aos] {
+			transition: none !important;
+		}
+	}
+
+	.navbar-nav {
+		.nav-item {
+			.nav-link {
+				display: flex;
+				align-items: center;
+				padding: 8px 0;
+				color: #6e84a3;
+				font-size: .9rem;
+
+				@media (max-width: 1000px) {
+					font-size: 1rem;
+				}
+				.nav-icon {
+					margin-right: 11px;
+
+					svg {
+						fill: #6e84a3;
+						height: 17px;
+					}
+				}
+				.badge {
+					margin-left: auto;
+				}
+				&:hover {
+					color: #12263f;
+					text-decoration: none;
+
+					.nav-icon {
+						svg {
+							fill: #12263f;
+						}
+					}
+				}
+			}
+		}
+		hr {
+			height: 0;
+			width: 100%;
+			border: none;
+			border-top: 1px solid tint(@primary, 65%);
+			background-color: transparent;
+			margin: 12px 0;
+		}
+	}
+
+	.navbar.desktop {
+		display: grid;
+		grid-template-rows: 1fr auto;
+		height: 100%;
+
+		@media (max-width: 1000px) {
+			display: none;
+		}
+		.top {
+			.capitalup-logo img {
+				margin: 0 auto;
+				margin-top: 33px;
+				margin-bottom: 30px;
+				display: block;
+				width: 70%;
+				opacity: 0.8;
+			}
+			
+		}
+		.bottom {
+			margin-bottom: 20px;
+			text-align: center;
+
+			.phone {
+				text-align: center;
+				margin-top: 7px;
+				font-size: .85rem;
+			}
+		}
+	}
+	.navbar.mobile {
+		display: none;
+		padding: 0 10px;
+		padding-bottom: 20px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		background: white;
+		box-shadow: 0 8px 10px rgba(0, 0, 0, 0.05);
+
+		@media (max-width: 1000px) {
+			display: block;
+		}
+		.top {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 20px;
+			padding: 15px 0;
+
+			.left {
+				&.brand {
+					display: grid;
+					grid-template-columns: 46px auto;
+					grid-gap: 7px;
+
+					.brand-logo {
+						width: 100%;
+						height: 46px;
+						position: relative;
+						background-color: #e3ebf6;
+						background-position: center;
+						background-repeat: no-repeat;
+						background-size: cover;
+						border-radius: 99999px;
+						box-shadow: 0 8px 13px 0px #0000000f;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						.brand-name {
+							font-size: 1.5rem;
+							font-weight: 300;
+							color: #4f5568;
+							text-transform: uppercase;
+						}
+						.dot {
+							width: 8px;
+							height: 8px;
+							position: absolute;
+							bottom: 5%;
+							right: 5%;
+							border-radius: 999px;
+							box-shadow: 0 0 0 2px white;
+
+							&.success {
+								background-color: #00d97e;
+							}
+							&.danger {
+								background-color: @danger;
+							}
+						}
+					}
+					.text {
+						line-height: 1.2;
+						margin-top: 2px;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+
+						.company-name {
+							color: darken(#6e84a3, 20%);
+							font-size: .9rem;
+						}
+						.seo {
+							font-size: .8rem;
+							color: fade(#12263f, 50%);
+						}
+					}
+				}
+			}
+			.right {
+				&.balance {
+					display: flex;
+					align-items: center;
+					height: 100%;
+					color: #6e84a3;
+
+					.ruble-icon {
+						margin-right: 10px;
+
+						svg {
+							fill: @primary;
+							width: 30px;
+						}
+					}
+					.badge {
+						padding: 0px 9px;
+						height: 22px;
+						border-radius: 6px;
+						font-size: 0.75rem;
+						font-weight: 500;
+						margin-right: 19px;
+						margin-left: 10px;
+					}
+				}
+			}
+		}
+		.btn {
+			width: 100%;
+			margin: 12px 0;
+		}
+
+
+	}
+	.fade-enter-active, .fade-leave-active {
+		transition: all 0.2s ease;
+	}
+	.fade-enter, .fade-leave-to {
+		transform: translateX(0) translateY(-5px) scale(0.97);
+		opacity: 0;
+	}
+}

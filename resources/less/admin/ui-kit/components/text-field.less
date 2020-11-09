@@ -1,0 +1,48 @@
+
+.ui-text-field {
+	position: relative;
+	margin-top: 10px;
+
+	label {
+		font-size: 1em;
+		display: flex;
+		align-items: center;
+		margin-bottom: 7px;
+		transition:
+			transform .25s ease,
+			color .25s ease;
+	}
+	input {
+		width: 100%;
+		height: 45px;
+		padding: 0 20px;
+		font-weight: 400;
+		font-size: 1rem;
+	}
+	&.default {
+		label {
+			color: #212529;
+		}
+		input {
+			color: #495057;
+			border-bottom: 1px solid fade(#fff, 20%);
+
+			&:focus ~ label {
+				color: @primary;
+			}
+		}
+	}
+	&.white {
+		label {
+			color: fade(#fff, 50%);
+		}
+		input {
+			color: #fff;
+			border-bottom: 1px solid fade(#fff, 50%);
+
+			&:focus ~ label {
+				color: #fff;
+			}
+		}
+	}
+}

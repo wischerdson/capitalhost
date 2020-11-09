@@ -1,0 +1,43 @@
+
+@tooltip-arrow-round: 4px;
+
+.ui-tooltip {
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: calc(100% - 10px);
+	position: absolute;
+
+	&__content {
+		font-size: .85rem;
+		width: max-content;
+		padding: 7px 9px;
+		border-radius: 6px;
+		background-color: rgba(#000, 0.4);
+		color: rgba(#fff, .88);
+		backdrop-filter: saturate(180%) blur(30px);
+	}
+	&__arrow-wrapper {
+		overflow: hidden;
+		display: flex;
+
+		&:before {
+			content: "";
+			display: block;
+			width: 20px;
+			height: 20px;
+			background-color: rgba(#000, 0.4);
+			backdrop-filter: saturate(180%) blur(30px);
+		}
+	}
+	&.on-top {
+		.ui-tooltip__arrow-wrapper {
+			justify-content: center;
+
+			&:before {
+				transform: rotate(45deg) translateY(-10px);
+				border-bottom-right-radius: @tooltip-arrow-round;
+				transform-origin: 50% 0 0;
+			}
+		}
+	}
+}

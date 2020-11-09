@@ -1,0 +1,128 @@
+#template_sign_up {
+	.container {
+		margin-bottom: 100px;
+
+		.title, form {
+			max-width: 700px;
+		}
+
+		.title {
+			padding-top: 20px;
+			padding-bottom: 28px;
+
+			h1 {
+				font-weight: 500;
+				line-height: 1.25;
+				margin-bottom: 0;
+				margin-left: -3px;
+			}
+			.text-muted {
+				font-size: 1.0625rem;
+			}
+		}
+		form {
+			.form-group {
+				width: 100%;
+			}
+			.top {
+				display: grid;
+				grid-gap: 20px;
+				grid-template-columns: 1fr 1fr;
+
+				@media (max-width: 600px) {
+					display: flex;
+					flex-direction: column-reverse;
+				}
+				.right {
+					display: flex;
+					align-items: center;
+
+					.form-group {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+					}
+
+					input {
+						display: none;
+					}
+					.logo-wrapper {
+						width: 60%;
+						max-width: 200px;
+						border-radius: 99999px;
+						box-shadow: 0 8px 13px 0 rgba(0,0,0,.06);
+						position: relative;
+						background-position: 50%;
+						background-repeat: no-repeat;
+						background-size: cover;
+						line-height: 1;
+						color: #869ab8;
+						cursor: pointer;
+
+						@media (max-width: 700px) {
+							font-size: .9rem;
+						}
+						.icon {
+							margin: 0 auto;
+							margin-bottom: 10px;
+
+							svg {
+								width: 35px;
+								fill: #869ab8;
+							}
+						}
+						& > * {
+							display: flex;
+							justify-content: center;
+							flex-direction: column;
+							align-items: center;
+							text-align: center;
+						}
+					}
+				}
+			}
+			.bottom {
+				.submit-wrapper {
+					display: grid;
+					grid-template-columns: auto 1fr;
+					align-items: center;
+					grid-gap: 20px;
+					margin-top: 20px;
+
+					@media (max-width: 600px) {
+						grid-template-columns: 1fr;
+					}
+
+					.btn {
+						padding: 13px 30px;
+					}
+					.entry-policy p {
+						line-height: 1.2;
+						font-size: .8rem;
+					}
+				}
+			}
+
+			.row {
+				display: grid;
+				grid-gap: 20px;
+
+				&.column-2 {
+					grid-template-columns: 1fr 1fr;
+
+					@media (max-width: 600px) {
+						grid-template-columns: 1fr;
+						grid-gap: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+.unacceptable {
+	color: @danger;
+	text-align: center;
+	padding-bottom: 20px;
+	padding-top: calc(20px - 1rem);
+}

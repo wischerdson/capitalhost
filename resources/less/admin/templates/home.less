@@ -1,0 +1,70 @@
+#template_home {
+	.top {
+		margin-bottom: 30px;
+
+		.controls {
+			display: flex;
+
+			.form-group.search {
+				background-color: #fff;
+				border-radius: 10px;
+				box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
+				position: relative;
+				display: flex;
+				align-items: center;
+
+				.icon {
+					position: absolute;
+					left: 15px;
+					top: 0;
+					bottom: 0;
+					display: flex;
+					align-items: center;
+					pointer-events: none;
+				}
+				.icon svg {
+					width: 21px;
+					height: 21px;
+					fill: #88a1c2;
+					transition: fill .15s ease;
+				}
+				.form-control {
+					padding: 16px 20px;
+					padding-left: 45px;
+					color: #212529;
+					width: 260px;
+				}
+			}
+		}
+	}
+
+	.user-list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 25px;
+		user-select: none;
+
+		&.wait {
+			opacity: .6;
+			transition: opacity .6s ease;
+		}
+
+		@media (max-width: 1140px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@media (max-width: 980px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: 670px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+
+		@import "./../snippets/user-info-card.less";
+	}
+
+	.pagination {
+		max-width: max-content;
+		margin: 0 auto;
+		margin-top: 70px;
+	}
+}

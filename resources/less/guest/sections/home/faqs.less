@@ -1,0 +1,45 @@
+#section_home_faqs {
+	background-color: #1b2a4e;
+	padding-top: 50px;
+	padding-bottom: 100px;
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 40px;
+
+		@media (max-width: 760px) {
+			grid-template-columns: repeat(1, 1fr);
+			grid-gap: 20px;
+		}
+
+		.faq-block {
+			display: grid;
+			grid-template-columns: 30px 1fr;
+			grid-gap: 1.5rem;
+
+			.icon {
+				height: 30px;
+				background-color: #42ba96;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 999999px;
+				color: white;
+			}
+			.text {
+				.question {
+					color: white;
+					letter-spacing: -.01em;
+					font-size: 1.1875rem;
+					margin-bottom: .5rem;
+					line-height: 1.45;
+				}
+			}
+		}
+	}
+	.text-center {
+		margin-top: 50px;
+		text-align: center;
+	}
+}

@@ -1,0 +1,247 @@
+#section_topbar {
+	position: relative;
+	z-index: 99;
+
+	.topbar.desktop {
+		display: flex;
+		justify-content: space-between;
+		padding: 12px 36px;
+		background-color: white;
+		margin-left: 250px;
+		border-bottom: 1px solid #e3ebf6;
+		position: relative;
+		z-index: 99;
+
+		.left {
+			.balance {
+				display: flex;
+				align-items: center;
+				height: 100%;
+
+				.ruble-icon {
+					margin-right: 10px;
+
+					svg {
+						fill: @primary;
+						width: 30px;
+					}
+				}
+				.badge {
+					padding: 0px 9px;
+					height: 22px;
+					border-radius: 6px;
+					font-size: 0.75rem;
+					font-weight: 500;
+					margin-right: 19px;
+					margin-left: 10px;
+					
+					svg {
+						max-height: 48%;
+						margin-left: 3px;
+					}
+				}
+			}
+			.btn {
+				padding: 13px 25px;
+			}
+		}
+		.right {
+			display: flex;
+			align-items: center;
+
+			.notifications {
+				cursor: pointer;
+				margin-right: 25px;
+				position: relative;
+				padding: 5px;
+
+				.dot {
+					width: 6px;
+					height: 6px;
+					background-color: #335eea;
+					border-radius: 9999px;
+					box-shadow: 0 0 0px 2px white;
+					top: 6px;
+					right: 6px;
+					position: absolute;
+				}
+				svg {
+					width: 18px;
+					fill: #6e84a3;
+				}
+			}
+			.profile {
+				display: flex;
+				position: relative;
+				cursor: pointer;
+
+				.brand {
+					display: grid;
+					grid-template-columns: 46px auto;
+					align-items: center;
+					grid-gap: 13px;
+					
+					.brand-logo {
+						width: 100%;
+						height: 46px;
+						position: relative;
+						border-radius: 99999px;
+						box-shadow: 0 8px 13px 0px #0000000f;
+
+						.image, .brand-name {
+							width: 100%;
+							height: 100%;
+							border-radius: inherit;
+						}
+
+						.brand-name {
+							background-color: #e1e1e1;
+							font-size: 1.5rem;
+							font-weight: 300;
+							color: #4f5568;
+							text-transform: uppercase;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+						}
+						.dot {
+							width: 8px;
+							height: 8px;
+							position: absolute;
+							bottom: 5%;
+							right: 5%;
+							border-radius: 999px;
+							box-shadow: 0 0 0 2px white;
+
+							&.success {
+								background-color: #00d97e;
+							}
+							&.danger {
+								background-color: @danger;
+							}
+						}
+					}
+					.text {
+						line-height: 1.2;
+						margin-top: 2px;
+
+						.company-name {
+							color: darken(#6e84a3, 20%);
+							font-size: .9rem;
+						}
+						.seo {
+							font-size: .8rem;
+							color: fade(#12263f, 50%);
+						}
+					}
+					&:hover {
+						&, * {
+							text-decoration: none;
+						}
+					}
+				}
+				.popup {
+					position: absolute;
+					top: 100%;
+					right: 0;
+
+					ul {
+						margin-top: 20px;
+						background-color: white;
+						border-radius: 7px;
+						box-shadow: 0 .75rem 1.5rem rgba(18,38,63,.03);
+						padding: 8px 0;
+						min-width: 160px;
+
+						li {
+							a {
+								display: flex;
+								align-items: center;
+								white-space: nowrap;
+								color: #6e84a3;
+								padding: .375rem 1.5rem;
+
+								.icon {
+									margin-right: 12px;
+
+									svg {
+										width: 15px;
+										fill: #6e84a3;
+									}
+								}
+								&:hover {
+									text-decoration: none;
+									color: #12263f;
+
+									svg {
+										fill: #12263f;
+									}
+								}
+							}
+						}
+						hr {
+							height: 0;
+							margin: 12px 0;
+							border: none;
+							width: 100%;
+							border-top: 1px solid #edf2f9;
+						}
+					}
+					&.fade-enter-active, &.fade-leave-active {
+						transition: all .2s ease;
+					}
+					&.fade-enter, &.fade-leave-to {
+						opacity: 0;
+						transform: translateX(0) translateY(-3px) scale(0.97);
+					}
+				}
+			}
+		}
+		@media (max-width: 1000px) {
+			display: none;
+		}
+	}
+	.topbar.mobile {
+		display: none;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 10px;
+		background-color: white;
+		border-bottom: 1px solid #e3ebf6;
+		position: relative;
+		z-index: 99;
+		height: 50px;
+
+		@media (max-width: 1000px) {
+			display: flex;
+		}
+		.left {
+			.logo {
+				display: flex;
+				align-items: center;
+
+				img {
+					width: 97px;
+				}
+			}
+		}
+		.right {
+			display: flex;
+			align-items: center;
+
+			.btn {
+				width: 40px;
+				height: 40px;
+				display: flex;
+				padding: 9px;
+
+				svg {
+					width: 100%;
+					height: 100%;
+					margin: 0;
+					fill: #6e84a3;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+.online-dot {
+	width: 8px;
+	height: 8px;
+	background-color: #84c550;
+	margin-right: 7px;
+	border-radius: 999px;
+	animation: online-dot__blink 1s infinite linear;
+	display: inline-block;
+}
+@keyframes online-dot__blink {
+	0% {
+		opacity: .4;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: .4;
+	}
+}
