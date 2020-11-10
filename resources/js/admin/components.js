@@ -13,4 +13,8 @@ export default (view) => {
 		view.component('UserDetailsTask', 'snippet-user-details-task')
 		view.component('UserInfoCard', 'snippet-user-info-card')
 	})
+
+	view.namespace('components').group((view) => {
+		view.component('Pagination', 'component-pagination')
+	})
 }
