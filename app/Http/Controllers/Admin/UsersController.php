@@ -25,7 +25,7 @@ class UsersController extends Controller
 			->orWhere('last_name', 'like', $search)
 			->orWhere('company', 'like', $search)
 			->orWhere('email', 'like', $search)
-			->orWhere('id', $search)
+			->orWhere('id', 'like', $search)
 			->orWhereHas('domains', function ($query) use ($search) {
 				$query->where('name', 'like', $search);
 			})

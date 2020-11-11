@@ -16,6 +16,13 @@ export default {
 		sColor () {
 			return this.user.purchased_ssl.length ? 'green' : 'red'
 		},
+		unresolvedTasksCount () {
+			return this.user.admin_tasks.reduce((i, task) => {
+				if (task.status != 2)
+					return i + 1
+				return i
+			}, 0)
+		}
 	},
 	methods: {
 		selectUser () {

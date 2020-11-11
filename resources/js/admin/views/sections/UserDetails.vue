@@ -12,9 +12,9 @@
 		computed: {
 			createdAt () {
 				const date = new Date(this.user.created_at)
-				const monthes = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+				const monthes = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря']
 
-				return `${monthes[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`
+				return date.getDate() + ' ' + monthes[date.getMonth()] + ' ' + date.getFullYear()
 			},
 			statusColor () {
 				if (this.user.freeze_in > 7*24)

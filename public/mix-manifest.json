@@ -1,10 +1,10 @@
 {
-    "/js/account.js": "/js/account.js",
-    "/js/guest.js": "/js/guest.js",
-    "/css/guest.css": "/css/guest.css",
-    "/css/account.css": "/css/account.css",
-    "/css/manage.css": "/css/manage.css",
-    "/js/manage.js": "/js/manage.js",
-    "/js/manifest.js": "/js/manifest.js",
-    "/js/vendor.js": "/js/vendor.js"
+    "/js/manifest.js": "/js/manifest.js?id=7db827d654313dce4250",
+    "/js/vendor.js": "/js/vendor.js?id=aa54c165b45e0e642c0a",
+    "/js/account.js": "/js/account.js?id=2a07e12d0ffb4c872f40",
+    "/js/guest.js": "/js/guest.js?id=a195c3ac33f5892bc866",
+    "/css/guest.css": "/css/guest.css?id=e3100166e5aced9344a7",
+    "/css/account.css": "/css/account.css?id=2916cc316acbbf73f6f3",
+    "/css/manage.css": "/css/manage.css?id=f983d17aa71c357d28af",
+    "/js/manage.js": "/js/manage.js?id=b11d6a7ad0ba70df417b"
 }

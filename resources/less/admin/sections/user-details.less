@@ -38,30 +38,32 @@
 	}
 	.user-info {
 		width: 500px;
-		padding: 40px 25px;
 		overflow-x: hidden;
 
 		@media (max-width: 550px) {
 			width: 100%;
+		}
+	}
+	.scroll-content {
+		position: relative;
+		padding: 40px 25px;
+
+		@media (max-width: 550px) {
 			padding-bottom: 75px;
 		}
 	}
 	.close-sidebar {
-		padding: 8px;
 		border-radius: 11px;
-		background-color: #f1f8ff;
 		position: absolute;
 		top: 12px;
 		right: 12px;
-		width: 25px;
-		height: 25px;
 		z-index: 999;
-		box-sizing: content-box;
+		padding: 5px;
 
 		svg {
-			width: 17px;
-			height: 17px;
-			fill: #a1b8d3;
+			width: 14px;
+			height: 14px;
+			fill: #bbc3cd;
 		}
 	}
 	.loader {
@@ -100,21 +102,22 @@
 		}
 	}
 	.header {
-		.row {
-			display: flex;
-		}
+		display: grid;
+		grid-template-columns: auto 1fr;
+		grid-gap: 15px;
+		align-items: center;
+
 		.rounded-image {
 			width: 70px;
 			height: 70px;
 			border-radius: 999px;
 			position: relative;
 			user-select: none;
-			margin-right: 15px;
 
 			.image {
 				border-radius: inherit;
 				.absolutely-covered;
-				background-image: linear-gradient(to bottom, #fff, #ccc);
+				background-image: linear-gradient(to bottom, #f5f5f5, #eaeaea);
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -129,6 +132,30 @@
 				box-shadow: 0 0 0 3px #fff;
 			}
 		}
+		.balance-badge {
+			position: absolute;
+			right: 0;
+			top: 0;
+			font-size: .85rem;
+			border-radius: 7px;
+			padding: 4px 8px;
+			font-weight: 400;
+			min-width: 40px;
+			text-align: center;
+
+			&.red {
+				background-color: #f7e2e1;
+				color: #ff625a;
+			}
+			&.yellow {
+				background-color: #fff1c9;
+				color: #ffa200;
+			}
+			&.green {
+				background-color: #d9f9ec;
+				color: #00d97e;
+			}
+		}
 		.user-company {
 			font-weight: 300;
 			font-size: .9rem;
@@ -137,8 +164,10 @@
 		.user-name {
 			font-weight: 300;
 			font-size: 1.25rem;
+			position: relative;
 		}
 		.user-created-at {
+			font-size: .9rem;
 			margin-top: 10px;
 		}
 		.user-balance {
