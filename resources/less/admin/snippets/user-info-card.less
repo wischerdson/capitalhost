@@ -168,6 +168,21 @@
 			}
 		}
 	}
+	.reload-btn {
+		position: absolute;
+		bottom: 11px;
+		right: 11px;
+		width: 34px;
+		height: 34px;
+
+		svg {
+			width: 20px;
+			height: 20px;
+		}
+		&.spin svg {
+			animation: spin 2s linear infinite;
+		}
+	}
 	&:hover {
 		transform: translateY(-10px);
 		box-shadow: 0 10px 30px rgba(0,0,0,.1);

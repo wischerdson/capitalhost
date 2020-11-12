@@ -32,10 +32,20 @@
 				</li>
 			</ul>
 			<div class="tag-list">
-				<span class="tag" :class="[hColor, {striked: user.plan}]">H</span>
+				<span class="tag" :class="[hColor, {striked: !user.plan}]">H</span>
 				<span class="tag" :class="dColor">D</span>
 				<span class="tag" :class="sColor">S</span>
 			</div>
+			<button
+				class="reload-btn btn primary-light"
+				:class="{spin: reloading}"
+				@click.stop="reloadSite"
+				v-if="user.domains.length"
+			>@include('admin.svg.arrow-repeat')</button>
 		</div>
 	</li>
 </template>
+
+@push('data')
+	tildaSecret: '{{ env('TILDA_SECRET_KEY') }}',
+@endpush

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', 'HomeController@index');
-// Route::any('clients/search', 'ClientsController@search')->name('clients.search');
+
 Route::prefix('tasks')->name('tasks.')->group(function () {
 	Route::post('create', 'TasksController@create')->name('create');
 	Route::post('update', 'TasksController@update')->name('update');

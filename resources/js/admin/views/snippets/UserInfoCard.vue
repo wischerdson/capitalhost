@@ -3,6 +3,11 @@
 export default {
 	template: '#snippet_userInfoCard',
 	props: ['user'],
+	data () {
+		return {
+			reloading: false
+		}
+	},
 	computed: {
 		selectedUser () {
 			return this.$store.getters.user
@@ -27,6 +32,20 @@ export default {
 	methods: {
 		selectUser () {
 			this.$store.state.user = this.user
+		},
+		reloadSite () {
+			const url = `https://${this.user.domains[0].name}/reload.php?secretKey=${d.tildaSecret}`
+
+			this.reloading = true
+
+			this.$axios.post(url, null, {
+				transformRequest: [function (data, headers) {
+					delete headers.common['X-CSRF-TOKEN']
+					return data;
+				}],
+			}).finally(() => {
+				this.reloading = false
+			})
 		}
 	}
 }
