@@ -49,7 +49,7 @@
 									<div class="info-item" v-if="user.domains.length">
 										<span class="key">Домен</span>
 										<input type="text" class="value" readonly="readonly" :value="user.domains[0].name">
-										<button class="btn copy-to-clipboard" @click="copyToClipboard(user.domains[0].name, $event)">
+										<button class="btn copy-to-clipboard" @click="copyToClipboard('https://'+user.domains[0].name, $event)">
 											<span class="copy">@include('svg.copy')</span>
 											<span class="tick" style="display: none">@include('admin.svg.check')</span>
 										</button>

@@ -14,7 +14,7 @@
 			>@include('svg.chevron-left')</button>
 		</div>
 		
-		<div class="pagination-elements" :style="`width: ${(30 + 5) * (totalPages >= 5 ? 5 : totalPages)} : `">
+		<div class="pagination-elements" :style="`width: ${(30 + 5) * (totalPages >= 5 ? 5 : totalPages)}px`">
 			<ul class="pagination-list" :style="`transform: translateX(${paginationOffset}px);`">
 				<li
 					class="btn pagination-item"

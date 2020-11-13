@@ -12,7 +12,8 @@
 					perPage: null
 				},
 				timeout: null,
-				search: ''
+				search: '',
+				sortingDetails: {sort: 'created_at', order: 'asc'}
 			}
 		},
 		watch: {
@@ -22,6 +23,10 @@
 					this.pagination.currentPage = 1
 					this.refreshUsers()
 				}, 700)
+			},
+			sortingDetails (value) {
+				this.pagination.currentPage = 1
+				this.refreshUsers()
 			}
 		},
 		computed: {
@@ -39,11 +44,13 @@
 			},
 			refreshUsers () {
 				this.wait = true
-				const url = `/users/${this.search ? 'search' : 'get'}`
+				const url = '/users/get'
 				this.$axios.post(url, {
 					secret: 255655,
 					page: this.pagination.currentPage,
-					search: this.search
+					search: this.search,
+					sortBy: this.sortingDetails.sort,
+					order: this.sortingDetails.order
 				}).then(({data}) => {
 					this.$store.commit('users', data.data)
 					this.pagination.currentPage = data.current_page

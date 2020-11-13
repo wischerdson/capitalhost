@@ -13,5 +13,4 @@ Route::prefix('tasks')->name('tasks.')->group(function () {
 
 Route::prefix('users')->name('users.')->group(function () {
 	Route::post('get', 'UsersController@get')->name('get');
-	Route::post('search', 'UsersController@search')->name('search');
 });
