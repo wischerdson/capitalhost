@@ -21,7 +21,7 @@
 									<option :value="{sort: 'created_at', order: 'desc'}">Дата: от новых к старым</option>
 									<option :value="{sort: 'freeze_in', order: 'asc'}">Баланс: от меньшего к большему</option>
 									<option :value="{sort: 'freeze_in', order: 'desc'}">Баланс: от большего к меньшему</option>
-									<option :value="{sort: 'tasks_count', order: 'asc'}">Количество невыполненных задач</option>
+									<option :value="{sort: 'tasks_count', order: 'desc'}">Количество невыполненных задач</option>
 								</select>
 								<div class="chevron-down">
 									@include('svg.chevron-down')

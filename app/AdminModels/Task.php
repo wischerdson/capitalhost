@@ -22,10 +22,6 @@ class Task extends Model
 
 	protected static function booted()
 	{
-		static::addGlobalScope('deleted', function (Builder $builder) {
-			$builder->where('deleted', false);
-		});
-
 		static::addGlobalScope('order', function (Builder $builder) {
 			$builder->orderBy('step', 'asc');
 		});

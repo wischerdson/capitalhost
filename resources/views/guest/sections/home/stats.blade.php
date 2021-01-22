@@ -6,7 +6,7 @@
 		<div class="row">
 			<div class="column">
 				<h2>
-					CapitalHost - это спектор услуг, которые позволят <span class="text-primary">поднять Ваш бизнес на новый современый уровень</span>.
+					CapitalHost - это спектор услуг, которые позволят <span class="text-primary">поднять Ваш бизнес на новый современный уровень</span>.
 				</h2>
 			</div>
 			<div class="column">

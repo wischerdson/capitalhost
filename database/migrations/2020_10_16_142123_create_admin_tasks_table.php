@@ -21,7 +21,6 @@ class CreateAdminTasksTable extends Migration
 			$table->tinyInteger('step')->default(1);
 			$table->integer('notify_at')->unsigned()->nullable();
 			$table->enum('status', [0, 1, 2])->comment('0 - NOT ACCEPTED; 1 - ACCEPTED; 2 - COMPLETE')->default(0);
-			$table->boolean('deleted')->default(false);
 
 			$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 		});

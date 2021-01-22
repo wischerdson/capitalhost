@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class SiteController extends Controller
 {
-    protected $template;
+	protected $template;
 	protected $vars = [];
 	protected $title;
 	protected $description;
